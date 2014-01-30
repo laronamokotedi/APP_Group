@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+function initialize() {
+  var Russel = new google.maps.LatLng(45.38682,-75.698327);
+  var point1= new google.maps.LatLng(45.38683, -75.697393);
+  var point2= new google.maps.LatLng(45.38683, -75.697844);
+  var point3= new google.maps.LatLng(45.38683, -75.696707);
+  var point4= new google.maps.LatLng(45.385954, -75.697748);
+  var point5= new google.maps.LatLng(45.386037, -75.696803);
+  var point6= new google.maps.LatLng(45.386044, -75.69646);
+  
+  var mapOptions = {
+    zoom: 15,
+    center: Russel
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: Russel,
+      map: map,
+      title: 'Russel!'
+	 });
+	 
+  var marker = new google.maps.Marker({
+      position: point1,
+      map: map,
+      title: 'Point1!' 
+	 });
+  var marker = new google.maps.Marker({
+      position: point2,
+      map: map,
+      title: 'Point2'
+    });
+  var marker = new google.maps.Marker({
+      position: point3,
+      map: map,
+      title: 'Point3'
+    });
+  var marker = new google.maps.Marker({
+      position: point4,
+      map: map,
+      title: 'Point4'
+    });
+  var marker = new google.maps.Marker({
+      position: point5,
+      map: map,
+      title: 'Point5'
+    });
+  var marker = new google.maps.Marker({
+      position: point6,
+      map: map,
+      title: 'Point6'
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
